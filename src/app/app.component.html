@@ -1,0 +1,33 @@
+<div class="container">
+<h1>
+  {{title}}
+</h1>
+
+  
+
+  
+<h4>List of Employess based on roles(Type Roles like Admin,Supervisor,Member,Super admin..)</h4>  
+  
+  <div class="container-fluid">
+  <input type="text" [(ngModel)]="role" placeholder="type Admin,Member...etc" /><br>
+  <div class="row">
+  <div class="col head"><span>Name</span></div>
+  <div class="col head"><span>Role</span></div>
+  <div class="col head"><span>Company name</span></div>
+  </div>
+  <div *ngFor="let em of empList">
+  <div *ngIf="em.role==role">
+  <div class="row">
+  <div class="col"><span >{{em.name}}</span></div>
+  <div class="col" myHighlight><span (click)="Hello(em.role)">{{em.role}}</span></div>
+  <div class="col"><span>{{em.companyName}}</span></div>
+  </div>
+  </div>
+  </div>
+  </div>
+  <div class="container-fluid output">
+  <router-outlet></router-outlet>
+  </div>
+  
+
+</div>

@@ -1,0 +1,10 @@
+.head
+{
+	font-style: italic;
+	font-size: 20px;
+	font-weight: bold;
+
+}
+
+.even { color: red; }
+.odd { color: green; }
